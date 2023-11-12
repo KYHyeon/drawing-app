@@ -11,8 +11,13 @@
 		CC7DD96F2B0098600000458E /* ChatClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7DD9642B0098600000458E /* ChatClient.framework */; };
 		CC7DD9742B0098600000458E /* ChatClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD9732B0098600000458E /* ChatClientTests.swift */; };
 		CC7DD9752B0098600000458E /* ChatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7DD9672B0098600000458E /* ChatClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC7DD9882B0098850000458E /* ChatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD9872B0098850000458E /* ChatClient.swift */; };
+		CC7DD9882B0098850000458E /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD9872B0098850000458E /* TCPClient.swift */; };
 		CC7DD98F2B0098E70000458E /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7DD98E2B0098E60000458E /* Network.framework */; };
+		CC7DD9932B00A4360000458E /* ChatClient.Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD9922B00A4360000458E /* ChatClient.Request.swift */; };
+		CC7DD9952B00A43F0000458E /* ChatClient.Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD9942B00A43F0000458E /* ChatClient.Response.swift */; };
+		CC7DD9972B00A83D0000458E /* ChatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD9962B00A83D0000458E /* ChatClient.swift */; };
+		CC7DD99A2B00AD800000458E /* TCPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD9992B00AD800000458E /* TCPClientError.swift */; };
+		CC7DD99C2B00AD880000458E /* TCPClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD99B2B00AD880000458E /* TCPClientDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +36,13 @@
 		CC7DD9682B0098600000458E /* ChatClient.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ChatClient.docc; sourceTree = "<group>"; };
 		CC7DD96E2B0098600000458E /* ChatClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7DD9732B0098600000458E /* ChatClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClientTests.swift; sourceTree = "<group>"; };
-		CC7DD9872B0098850000458E /* ChatClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClient.swift; sourceTree = "<group>"; };
+		CC7DD9872B0098850000458E /* TCPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPClient.swift; sourceTree = "<group>"; };
 		CC7DD98E2B0098E60000458E /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/Network.framework; sourceTree = DEVELOPER_DIR; };
+		CC7DD9922B00A4360000458E /* ChatClient.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClient.Request.swift; sourceTree = "<group>"; };
+		CC7DD9942B00A43F0000458E /* ChatClient.Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClient.Response.swift; sourceTree = "<group>"; };
+		CC7DD9962B00A83D0000458E /* ChatClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClient.swift; sourceTree = "<group>"; };
+		CC7DD9992B00AD800000458E /* TCPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPClientError.swift; sourceTree = "<group>"; };
+		CC7DD99B2B00AD880000458E /* TCPClientDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPClientDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +87,12 @@
 		CC7DD9662B0098600000458E /* ChatClient */ = {
 			isa = PBXGroup;
 			children = (
+				CC7DD9982B00AD770000458E /* TCPClient */,
 				CC7DD9672B0098600000458E /* ChatClient.h */,
 				CC7DD9682B0098600000458E /* ChatClient.docc */,
-				CC7DD9872B0098850000458E /* ChatClient.swift */,
+				CC7DD9922B00A4360000458E /* ChatClient.Request.swift */,
+				CC7DD9942B00A43F0000458E /* ChatClient.Response.swift */,
+				CC7DD9962B00A83D0000458E /* ChatClient.swift */,
 			);
 			path = ChatClient;
 			sourceTree = "<group>";
@@ -98,6 +111,16 @@
 				CC7DD98E2B0098E60000458E /* Network.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC7DD9982B00AD770000458E /* TCPClient */ = {
+			isa = PBXGroup;
+			children = (
+				CC7DD9872B0098850000458E /* TCPClient.swift */,
+				CC7DD9992B00AD800000458E /* TCPClientError.swift */,
+				CC7DD99B2B00AD880000458E /* TCPClientDelegate.swift */,
+			);
+			path = TCPClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC7DD9882B0098850000458E /* ChatClient.swift in Sources */,
+				CC7DD9952B00A43F0000458E /* ChatClient.Response.swift in Sources */,
+				CC7DD9882B0098850000458E /* TCPClient.swift in Sources */,
+				CC7DD9932B00A4360000458E /* ChatClient.Request.swift in Sources */,
+				CC7DD99C2B00AD880000458E /* TCPClientDelegate.swift in Sources */,
+				CC7DD9972B00A83D0000458E /* ChatClient.swift in Sources */,
 				CC7DD9692B0098600000458E /* ChatClient.docc in Sources */,
+				CC7DD99A2B00AD800000458E /* TCPClientError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
