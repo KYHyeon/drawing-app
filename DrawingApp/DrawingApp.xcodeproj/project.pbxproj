@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC7DD98A2B0098C10000458E /* ChatClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7DD9842B0098600000458E /* ChatClient.framework */; };
+		CC7DD98B2B0098C10000458E /* ChatClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC7DD9842B0098600000458E /* ChatClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCB7489C2AF79159004BEF1F /* DrawingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7489B2AF79159004BEF1F /* DrawingPath.swift */; };
 		CCB7489E2AF79611004BEF1F /* MutatingDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7489D2AF79611004BEF1F /* MutatingDrawable.swift */; };
 		CCB748A02AF7998C004BEF1F /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7489F2AF7998C004BEF1F /* Selectable.swift */; };
@@ -34,6 +36,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CC7DD9832B0098600000458E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC7DD97E2B0098600000458E /* ChatClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CC7DD9642B0098600000458E;
+			remoteInfo = ChatClient;
+		};
+		CC7DD9852B0098600000458E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC7DD97E2B0098600000458E /* ChatClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CC7DD96E2B0098600000458E;
+			remoteInfo = ChatClientTests;
+		};
 		CCBD24322AF60F9400B737C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CCBD24132AF60F9300B737C0 /* Project object */;
@@ -43,7 +59,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CC7DD98C2B0098C10000458E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CC7DD98B2B0098C10000458E /* ChatClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CC7DD97E2B0098600000458E /* ChatClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChatClient.xcodeproj; path = ../ChatClient/ChatClient.xcodeproj; sourceTree = "<group>"; };
 		CCB7489B2AF79159004BEF1F /* DrawingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPath.swift; sourceTree = "<group>"; };
 		CCB7489D2AF79611004BEF1F /* MutatingDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutatingDrawable.swift; sourceTree = "<group>"; };
 		CCB7489F2AF7998C004BEF1F /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
@@ -78,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7DD98A2B0098C10000458E /* ChatClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +123,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC7DD97F2B0098600000458E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC7DD9842B0098600000458E /* ChatClient.framework */,
+				CC7DD9862B0098600000458E /* ChatClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC7DD9892B0098C10000458E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CCB748A12AF92B0D004BEF1F /* Drawable */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +158,11 @@
 		CCBD24122AF60F9300B737C0 = {
 			isa = PBXGroup;
 			children = (
+				CC7DD97E2B0098600000458E /* ChatClient.xcodeproj */,
 				CCBD241D2AF60F9300B737C0 /* DrawingApp */,
 				CCBD24342AF60F9400B737C0 /* DrawingAppTests */,
 				CCBD241C2AF60F9300B737C0 /* Products */,
+				CC7DD9892B0098C10000458E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +256,7 @@
 				CCBD24172AF60F9300B737C0 /* Sources */,
 				CCBD24182AF60F9300B737C0 /* Frameworks */,
 				CCBD24192AF60F9300B737C0 /* Resources */,
+				CC7DD98C2B0098C10000458E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +316,12 @@
 			mainGroup = CCBD24122AF60F9300B737C0;
 			productRefGroup = CCBD241C2AF60F9300B737C0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CC7DD97F2B0098600000458E /* Products */;
+					ProjectRef = CC7DD97E2B0098600000458E /* ChatClient.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CCBD241A2AF60F9300B737C0 /* DrawingApp */,
@@ -272,6 +329,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CC7DD9842B0098600000458E /* ChatClient.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChatClient.framework;
+			remoteRef = CC7DD9832B0098600000458E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CC7DD9862B0098600000458E /* ChatClientTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChatClientTests.xctest;
+			remoteRef = CC7DD9852B0098600000458E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CCBD24192AF60F9300B737C0 /* Resources */ = {
